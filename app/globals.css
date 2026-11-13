@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --latar: #f8fafc;
+  --teks: #0f172a;
+  --teks-lembut: #475569;
+  --kartu: #ffffff;
+  --garis: #e2e8f0;
+  --aksen: #047857;
+  --aksen-lembut: #d1fae5;
+  --bahaya: #dc2626;
+
+  --background: var(--latar);
+  --foreground: var(--teks);
+}
+
+html[data-tema="gelap"] {
+  --latar: #0b1120;
+  --teks: #e2e8f0;
+  --teks-lembut: #94a3b8;
+  --kartu: #111827;
+  --garis: #1f2937;
+  --aksen: #34d399;
+  --aksen-lembut: #064e3b;
+  --bahaya: #f87171;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: light;
+}
+
+html[data-tema="gelap"] {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--latar);
+  color: var(--teks);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
